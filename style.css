@@ -1,0 +1,75 @@
+:root {
+  --color-two: #FEC701;
+  --color-three: #E06D15;
+  --color-four: #2364A9;
+  --color-one: #73BFB7;
+  --blur: 0;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: conic-gradient(var(--color-one) 0 25%,
+      var(--color-two) 0 50%,
+      var(--color-three) 0 75%,
+      var(--color-four) 0 100%);
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(var(--blur, 10vmin));
+}
+
+.controls-color {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.controls-color input {
+  width: 50%;
+  height: 50%;
+  opacity: 0;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* .controls-color {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+input {
+  width: 40px;
+  height: 43px;
+  margin: 10px;
+} */
