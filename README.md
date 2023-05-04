@@ -1,1 +1,1 @@
-# You have the option to change the colors by clicking on them.
+## You have the option to change the colors by clicking on them.
